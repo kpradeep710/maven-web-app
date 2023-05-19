@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1><font color='pink'> Welcome to Ashok IT - Software Training Institute in hyderabad near jntu <font></h1>
+<h1><font color='blue'> Welcome to Ashok IT - Software Training Institute in hyderabad near jntu <font></h1>
 <h2>Learn Here.. Lead Anywhere..!! </h2>
 
 <a href="https://ashokitech.com/online-training-schedules">Click Here To See Ashok IT Training Schedules</a>
