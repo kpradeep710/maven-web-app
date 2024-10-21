@@ -3,8 +3,8 @@ pipeline{
  stages {
         stage('clone repo') {
             steps {
-                echo "Clone the Git repository"
-                git clone 'https://github.com/kpradeep710/maven-web-app.git'
+                git branch: 'master',
+                url: 'https://github.com/kpradeep710/maven-web-app.git'
             }
         }
 
@@ -18,9 +18,9 @@ pipeline{
         stage('Deploy') {
             steps {
                 echo "connected to ec2-instance and ready to deploy"
-               bat '''
-               scp -i "C:/Documents/nani.pem target/01-maven-web-app.war ec2-user@52.66.213.130:/home/ec2-user/slavenode"
-               '''
+                bat '''
+                scp -i C:/Documents/nani.pem target/01-maven-web-app.war ec2-user@65.0.12.242:/home/ec2-user/slavenode
+                '''
             }
         }
     }
