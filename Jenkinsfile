@@ -17,7 +17,9 @@
         stage('Deploy') {
             steps {
                 echo "connected to ec2-instance and ready to deploy"
-                sh scp -i "C:/Documents/nani.pem target/01-maven-web-app.war ec2-user@13.126.121.56:/home/ec2-user/"
+               bat '''
+               scp -i "C:/Documents/nani.pem target/01-maven-web-app.war ec2-user@3.108.40.177:/home/ec2-user/"
+               '''
             }
         }
     }
