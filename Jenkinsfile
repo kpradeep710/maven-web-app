@@ -1,8 +1,9 @@
 pipeline{
     agent any
  stages {
-        stage('checkout') {
+        stage('clone repo') {
             steps {
+                git branch: 'master',
                 git 'https://github.com/kpradeep710/maven-web-app.git'
             }
         }
