@@ -4,6 +4,7 @@ pipeline{
         stage('clone repo') {
             steps {
                 echo "Clone the Git repository"
+                git branch: 'master',
                 url: 'https://github.com/kpradeep710/maven-web-app.git'
             }
         }
