@@ -14,7 +14,6 @@
         stage('Build') {
             steps {
                 echo "build the maven project"
-                bat '"%JAVA_HOME%/bin/java" -version'
                 bat 'mvn clean package'
             }
         }
