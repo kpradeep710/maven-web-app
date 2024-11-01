@@ -1,4 +1,7 @@
 {
+ environment {
+        PATH = "$PATH:/C:/Program Files/apache-maven-3.9.3-bin/apache-maven-3.9.3/bin"
+    }
  stages {
         stage('clone repo') {
             steps {
