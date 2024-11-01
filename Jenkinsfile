@@ -18,7 +18,7 @@
             steps {
                 echo "connected to ec2-instance and ready to deploy"
                 bat '''
-                scp -i C:/Documents/nani.pem target/01-maven-web-app.war ec2-user@52.66.195.77:/home/ec2-user/
+                scp -i C:/Documents/k.pradeepkumar.pem target/01-maven-web-app.war ec2-user@52.66.195.77:/home/ec2-user/
                 '''
             }
         }
