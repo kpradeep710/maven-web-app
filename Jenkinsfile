@@ -1,6 +1,7 @@
 {
  environment {
-        PATH = "$PATH:/C:/Program Files/apache-maven-3.9.3-bin/apache-maven-3.9.3/bin"
+       JAVA_HOME= 'C:/Program Files/Java/jdk-17'
+       PATH = "${env.PATH};C:\\Program Files\\apache-maven-3.9.3-bin\\apache-maven-3.9.3\\bin"
     }
  stages {
         stage('clone repo') {
@@ -13,6 +14,7 @@
         stage('Build') {
             steps {
                 echo "build the maven project"
+                bat '"%JAVA_HOME%/bin/java" -version'
                 bat 'mvn clean package'
             }
         }
@@ -21,7 +23,7 @@
             steps {
                 echo "connected to ec2-instance and ready to deploy"
                 bat '''
-                scp -i C:/Documents/k.pradeepkumar.pem target/01-maven-web-app.war ec2-user@13.201.90.156:/home/ec2-user
+                scp -i "/c/ProgramData/Jenkins/.jenkins/workspace/task-3@2/target/01-maven-web-app.war" ec2-user@13.201.90.156:/home/ec2-user
                 '''
             }
         }
