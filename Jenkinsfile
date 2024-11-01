@@ -10,7 +10,7 @@
         stage('Build') {
             steps {
                 echo "build the maven project"
-                bat 'mvn clean package'
+                bat 'mvn clean install'
             }
         }
 
