@@ -1,9 +1,9 @@
 pipeline{
    agent any
  environment {
-       JAVA_HOME= 'C:/Program Files/Java/jdk-17'
-       MAVEN_HOME= 'C:\\Program Files\\apache-maven-3.9.3-bin\\apache-maven-3.9.3\\bin'
-       PATH = "${env.PATH}:${MAVEN_HOME}/bin"
+        JAVA_HOME = 'C:/Program Files/Java/jdk-17'
+        MAVEN_HOME = 'C:/Program Files/apache-maven-3.9.3'
+        PATH = "${env.PATH};${JAVA_HOME}/bin;${MAVEN_HOME}/bin"
     }
  stages {
         stage('clone repo') {
@@ -24,7 +24,7 @@ pipeline{
             steps {
                 echo "connected to ec2-instance and ready to deploy"
                 bat '''
-                scp -i "/c/ProgramData/Jenkins/.jenkins/workspace/task-3@2/target/01-maven-web-app.war" ec2-user@13.201.90.156:/home/ec2-user
+                scp -i "C:/ProgramData/Jenkins/.jenkins/workspace/task-2/target/01-maven-web-app.war" ec2-user@13.201.90.156:/home/ec2-user
                 '''
             }
         }
