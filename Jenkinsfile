@@ -1,6 +1,6 @@
 {
  environment {
-        JAVA_HOME = '/usr/lib/jvm/java-17-amazon-corretto.x86_64'
+        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
         MAVEN_HOME = '/usr/share/maven'
     }
  stages {
