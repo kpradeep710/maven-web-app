@@ -1,8 +1,7 @@
 {
  environment {
-        JAVA_HOME = 'C:/Program Files/Java/jdk-17'
-        MAVEN_HOME = 'C:/Program Files/apache-maven-3.9.3'
-        PATH = "${env.PATH};${JAVA_HOME}/bin;${MAVEN_HOME}/bin"
+        JAVA_HOME = '/usr/lib/jvm/java-17-amazon-corretto.x86_64'
+        MAVEN_HOME = '/usr/share/maven'
     }
  stages {
         stage('clone repo') {
@@ -23,7 +22,7 @@
             steps {
                 echo "connected to ec2-instance and ready to deploy"
                 bat '''
-                scp -i "C:/ProgramData/Jenkins/.jenkins/workspace/task-2/target/01-maven-web-app.war" ec2-user@13.201.90.156:/home/ec2-user
+                scp -i "C:/ProgramData/Jenkins/.jenkins/workspace/TASK-2/target/01-maven-web-app.war" ec2-user@13.201.90.156:/home/ec2-user
                 '''
             }
         }
